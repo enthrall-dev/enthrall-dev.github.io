@@ -1,0 +1,25 @@
+title: "Enthrall Dev Studio"
+email: "enthrall.dev@gmail.com"
+description: "As a solo developer, I create captivating and innovative applications that engage users."
+baseurl: ""
+url: "https://enthrall-dev.github.io"
+github_username:  enthrall-dev
+
+data_dir: assets/data
+
+collections:
+  apps:
+    output: true
+    permalink: /:collection/:name
+
+sass:
+  style: compressed
+
+include:
+  - assets/css
+  - assets/data
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

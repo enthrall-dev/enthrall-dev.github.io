@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  {% include head.html %}
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="container mx-auto py-6">
+    <h1 class="text-4xl font-bold">{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
+  <main class="container mx-auto">
+    {{ content }}
+    {% include contact.html %}
+  </main>
+  <footer class="container mx-auto py-6">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </footer>
+</body>
+</html>

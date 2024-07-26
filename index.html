@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="py-8">
+  <h2 class="text-2xl font-bold mb-6">Our Apps</h2>
+  <div>
+    {% if site.data.apps and site.data.apps.size > 0 %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for app in site.data.apps %}
+        <div class="bg-white p-4 rounded shadow">
+          <img src="{{ app.icon | default: '/assets/images/default-icon.png' }}" alt="{{ app.name }} Icon" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-semibold">{{ app.name }}</h3>
+          <p>{{ app.description }}</p>
+          <a href="{{ app.link }}" class="text-blue-500 hover:underline">Install</a>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No apps available at the moment. Please check back later.</p>
+    {% endif %}
+  </div>
+</section>
